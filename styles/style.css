@@ -1,0 +1,14 @@
+body { 
+background: url("../images/image 1.jpg");
+background-repeat: no-repeat;
+background-position:right top;
+font: bold 20px Verdana:
+}
+p {
+font-size: 15px
+}
+p#first{
+font-weight: bold;
+font-size: 40px;
+color: green;
+}
