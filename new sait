@@ -1,7 +1,4 @@
-#!/bin/env ruby
-# encoding: utf-8
-puts "Здравей"
-new_sait = '<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -50,5 +47,3 @@ new_sait = '<!DOCTYPE html>
 	<p>Довиждане</p>
 </body>
 </html>
-'
-File.write "bg/test.html", new_sait
