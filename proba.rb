@@ -1,28 +1,18 @@
 #!/bin/env ruby
 # encoding: utf-8
-File.write("./hi.html",'DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Comptext</title>
-	<link rel="stylesheet" type="text/css" href="../styles/style.css">
-</head>
-<body>
-	<h1>%{headline}</h1>
-	<a href="../en/index.html">English</a> 
-	<p id="first">%question</p>
-	<p id="second">%body</p>
 
-	<ul>
-		<li>Водата и земята образуват сладкия вкус.</li>
+bg_text = {
+	:headline=>"Тест страница",
+	:question=>"Храните подходящи за Вашия дошов тип",
+	:body=>"Според Аюрведа в природата съществуват шест основни вкуса: сладко, кисело, солено, лютиво, горчиво и стипчиво. <br>Тези вкусове произлизат от петте основни елемента, от които е изградено всичко във вселената.",
+	:text=>
+		"<li>Водата и земята образуват сладкия вкус.</li>
 		<li>Земята и огънят - киселия вкус.</li>
 		<li>Водата и огънят - соления вкус.</li>
 		<li>Огънят и въздухът - лютивия вкус.</li>
 		<li>Въздухът и пространството - горчивия.</li>
-		<li>Въздухът и земята - стипчивия.</li>
-	</ul>
-
-	<p>Усещането на вкусовете не само влияе върху храносмилането, но има директно въздействие върху дошите. </p>
+		<li>Въздухът и земята - стипчивия.</li>",
+	:text1=>"<p>Усещането на вкусовете не само влияе върху храносмилането, но има директно въздействие върху дошите. </p>
 	<p>Основен принцип в Аюрведа е, че подобното увеличава подобното.</p>
 
 	<p>Hапример сладкото, произлизащо от елементите вода и земя увеличава кафа доша, която е проявление на същите елементи, а намалява вата и питта. Сладки са храни като хлябът, оризът, млякото, захарта, повечето от плодовете. Те са необходими за всеки телесен тип, но прекомерната им употреба увеличава кафа и води до напълняване, засилване на слузната секреция в носа и околоносните синуси, образуване на храчки в бронхиалното дърво, предизвиква усещане за тежест, мързел, счита се за причина за развиване на диабет.</p>
@@ -46,19 +36,76 @@ File.write("./hi.html",'DOCTYPE html>
 	<p>Това са общи принципи, които не бива да се абсолютизират. Човек трябва да приема с храната си всичките шест вкуса, но в различни пропорции, съобразно своята преобладаваща доша. За да се постигне усещане за ситост е необходимо в едно хранене да присъстват всичките шест вкуса. Това разнообразие се постига, като към храната се прибавят различни подправки, а не с приемане на много продукти в едно хранене.</p>
 
 	<h2>Тест</h2>
-	<p>Довиждане</p>
-</body>
-</html>
-')
-
-bg_text = {
-	:headline=>"Тест страница",
-	:question=>"Храните подходящи за Вашия дошов тип",
-	:body=>"Според Аюрведа в природата съществуват шест основни вкуса: сладко, кисело, солено, лютиво, горчиво и стипчиво. <br>Тези вкусове произлизат от петте основни елемента, от които е изградено всичко във вселената.",
+	<p>Довиждане</p>"
 }
 
 eng_text = {
 	:headline=>"Test page",
 	:question=>"Foods suitable for your type doshic",
 	:body=>"According to Ayurveda there are six basic tastes: sweet, sour, salty, pungent, bitter and astringent. <br> These flavors come from the five basic elements of which is made up everything in the universe.",
+:text=>"
+<li> Water and earth sweet taste . </li>
+<li> earth and fire - sour taste . </li>
+<li> water and fire - salty taste . < li>
+<li> fire and air - pungent taste . </ li>
+<li> air and space - bitter . </ li>
+<li> air and earth - astringent . </ li>",
+:text1=>"<p> Tastes not only affects digestion, but has a direct effect on the doshas . </ p>
+<p> core principle of Ayurveda is that like increases similar . </ p>
+
+Sweet taste is composed <p> derived from water and earth element increases kapha dosha , which is of the same elements , and reduces vata and pitta . Sweet foods such as bread, rice, milk , sugar, most of the fruits . They are necessary for every body type, but in excess they increase kapha and leads to weight gain , increased mucus secretion in the nose and paranasal sinuses, the mucus in the bronchial tree , sensation of heaviness , laziness reason for developing diabetes . </ p>
+
+Yogurt <p> of the elements fire and earth. Acidic foods are most useful for wool . Smaller quantities can be used by kapha and pitta from very small . These include citrus fruits, yogurt , vinegar , cheese, all foods that are the product of fermentation. Used sparingly , they stimulate the appetite and salivation, improve digestion and refresh the mind. In excess they cause thirst , indigestion and can contribute to the development of various diseases . </ P>
+
+<p> Salty foods are used in small quantities of all types, but are most useful for vata and pitta and kapha increases . Salty sea salt , rock salt , kelp . Salt laxative effect , reduces spasms in the colon , maintain electrolyte balance , stimulates salivation , improves the taste of food helps digestion and elimination . Excessive use of salt can disrupt the balance of pitta and kapha . Causes hypertension , worsening of heart diseases , skin diseases , early appearance of wrinkles . </ P>
+
+<p> Pungent taste is most useful for kapha can be used in small quantities of wool and very pitta dosha . Pepper are many types of peppers, onions , radishes , garlic , mustard, ginger. They improve digestion, cleanse the sinuses , nasal and eye stimulated secretion. Excessive use can lead to a burning sensation and thirst , ulcers , skin diseases , diarrhea, insomnia . </ P>
+
+<p> Bitter is useful for all in small quantities , but Noah is better for pitta . Bitter chocolate, coffee , aloe, turmeric, lettuce. Bitter improves the taste of food in combination with other flavors. It is considered anti-toxic . Clears the body and the liver from toxins. Relieves burning sensation and itching in skin diseases , reduces the fever , improves digestion. It has a drying effect and causes a decrease in body fat . Excessive use is not recommended. It causes dry and rough skin , weight loss and sexual dysfunction . </ P>
+
+<p> Astringent taste should be used in pharmaceutical quantities . Each type can use it in small amounts, but pitta and kapha - little more than watts. Astringent are pomegranates, beans , cherries and rich tannins foods. Astringent is decreased secretion promotes wound healing and reduces bleeding . Excessive use can cause dry throat and mouth , constipation , flatulence, weight loss . </ P>
+
+<p> People with vata constitution should avoid bitter, pungent and astringent foods. Good for them are sweet , salty and sour foods. Not suitable light , dry and cold foods . Good everything is cooked , warm , with enough fat, as vata dosha is light, dry and lean . </ P>
+
+<p> People with pitta constitution should avoid sour, salty and pungent , ie citrus fruits, pickles . Favorable for them are sweet , bitter and astringent foods that should not be hot and cooked with a moderate amount of sunflower oil or refined oil . </ P>
+
+<p> People with kapha constitution should avoid sweet, sour and salty. Good for them are bitter, pungent and astringent foods that are warm , with very little fat , mostly corn or sunflower oil . </ P>
+
+<p> These are general principles that can not be absolute. One should take food with all six tastes in different proportions according to the predominant dosha . In order to achieve a feeling of satiety is necessary in a meal to all the six tastes . This variety is achieved by dietary adding different spices , not too many different products in one meal . </ P>
+
+<h2> Test </ h2>
+<p> Goodbye </ p>"
 }
+fasblon='<DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Comptext</title>
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<body>
+	<h1>%{headline}</h1>
+	<a href="../en/index1.html">English</a> 
+	<a href="../bg/index1.html">Български</a> 
+	<p id="first">%{question}</p>
+	<p id="second">%{body}</p>
+
+	<ul>
+		%{text}
+	</ul>
+
+	%{text1}
+</body>
+</html>
+'
+#File.write("./hi.html",fasblon%bg_text)
+#File.write("./hi1.html",fasblon%eng_text)
+
+t={
+	bg: bg_text,
+	en: eng_text
+}
+
+t.each do |lang, text|
+	File.write("./#{lang}/index1.html",fasblon%text)
+end
