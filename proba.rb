@@ -39,7 +39,7 @@ bg_text = {
 	<p>Довиждане</p>"
 }
 
-eng_text = {
+en_text = {
 	:headline=>"Test page",
 	:question=>"Foods suitable for your type doshic",
 	:body=>"According to Ayurveda there are six basic tastes: sweet, sour, salty, pungent, bitter and astringent. <br> These flavors come from the five basic elements of which is made up everything in the universe.",
@@ -76,15 +76,13 @@ eng_text = {
 <h2> Test </ h2>
 <p> Goodbye </ p>"
 }
-shablon = ""
-file = File.open("./shablon.html")
-file.each {|line| shablon << line }
+shablon = File.read("./shablon.html")
 #File.write("./hi.html",shablon%bg_text)
-#File.write("./hi1.html",shablon%eng_text)
+#File.write("./hi1.html",shablon%en_text)
 
 t={
 	bg: bg_text,
-	en: eng_text
+	en: en_text
 }
 
 t.each do |lang, text|
